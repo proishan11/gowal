@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package log.v1;
+
+option go_package = "github.com/proishan11/api/log_v1";
+
+// message in protobuf is analogous to struct in go
+// 1 and 2 are field ID
+message Record {
+	bytes value = 1;
+	uint64 offset= 2;
+}
