@@ -14,6 +14,8 @@ type segment struct {
 	store *store
 	index *index
 	// To calculate relative entries in index and append location in store
+	// baseOffset comes from Log as there are multiple segments and each segment
+	// holds a few offsets starting from baseOffset
 	baseOffset, nextOffset uint64
 	config                 Config
 }
